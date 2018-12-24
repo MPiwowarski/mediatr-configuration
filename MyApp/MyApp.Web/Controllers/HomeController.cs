@@ -23,7 +23,7 @@ namespace MyApp.Web.Controllers
         public async Task<IActionResult> Index()
         {
             await _mediator.Publish(new EmptyCommand());
-            var r2 = await _mediator.Send(new EmptyQuery());
+            var queryResult = await _mediator.Send(new EmptyQuery());
             return View();
         }
 
